@@ -1,2 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+Console.WriteLine(" BienVenu au Jeu \"NombreMystere!\"");
+const int  NbreMystere = 20;
+Console.WriteLine("Prénom du Joueur !");
+string prenom = Console.ReadLine();
+Console.WriteLine($"{prenom} vous pouvez deviner le nombre mystère entre 1 et 30 !");
+string nbString = Console.ReadLine();
+int nbSaisie  = Convert.ToInt32(nbString);
+if(nbSaisie == NbreMystere)
+{
+    Console.WriteLine("vous avez gagné!");
+}else{
+    if(nbSaisie > NbreMystere)
+    {
+        Console.WriteLine("le nombre mystère est plus petit");
+    }else{
+        Console.WriteLine("le nombre mystere est plus grand");
+    }
+}
+Console.ReadLine();
